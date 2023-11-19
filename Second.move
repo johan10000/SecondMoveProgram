@@ -21,7 +21,7 @@ module 0x42::SocialNetwork {
 
     // Function to add a friend to the friends list
     public fun add_friend(friends: &mut Friends, newFriend: Person) {
-        vector::push_back(&mut friends.people, newFriend);
+        vector::push_back(&mut friends.people, newFriend); // push new friend to the vector friends.people
     }
 
     # [test]
@@ -32,7 +32,7 @@ module 0x42::SocialNetwork {
         }; // create an empty list in which we will add the created friends
 
         let richard = Person {
-            name: b"Richard",
+            name: b"Richard", // byte string
             age: 31,
         }; // create a person called Richard of age 31
 
